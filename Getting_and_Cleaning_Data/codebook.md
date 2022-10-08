@@ -1,3 +1,5 @@
+INSTRUCCIONES.
+
 1. Descargar el conjunto de datos: Dataset, descargado y extraído en la carpeta llamada UCI HAR Dataset.
 
 
