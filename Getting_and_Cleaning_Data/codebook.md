@@ -2,29 +2,29 @@
 
 
 2. Asignar cada dato a las variables:
--Las características para esta base de datos provienen de las señales sin procesar de 3 ejes del acelerómetro y el giroscopio.
-2.1. features <- features.txt
+2.1. Las características para esta base de datos provienen de las señales sin procesar de 3 ejes del acelerómetro y el giroscopio.
+features <- features.txt
 
--Lista de actividades realizadas al tomarse las medidas correspondientes y sus etiquetas.
-2.2. activities <- activity_labels.txt
+2.2. Lista de actividades realizadas al tomarse las medidas correspondientes y sus etiquetas.
+activities <- activity_labels.txt
 
--Datos de prueba, de sujetos de prueba voluntarios observados.
-2.3. subject_test <- test/subject_test.txt
+2.3. Datos de prueba, de sujetos de prueba voluntarios observados.
+subject_test <- test/subject_test.txt
 
--Datos de prueba de características registradas.
-2.4. x_test <- test/X_test.txt
+2.4. Datos de prueba de características registradas.
+x_test <- test/X_test.txt
 
--Datos de prueba de etiquetas de código de actividades.
-2.5. y_test <- test/y_test.txt
+2.5. Datos de prueba de etiquetas de código de actividades.
+y_test <- test/y_test.txt
 
--Datos de entrenamiento de sujetos voluntarios observados.
-2.6. subject_train <- test/subject_train.txt
+2.6. Datos de entrenamiento de sujetos voluntarios observados.
+subject_train <- test/subject_train.txt
 
--Características grabadas datos del entrenamiento.
-2.7. x_train <- test/X_train.txt
+2.7. Características grabadas datos del entrenamiento.
+x_train <- test/X_train.txt
 
--Datos de entrenamiento de etiquetas de código de actividades.
-2.8. y_train <- test/y_train.txt
+2.8. Datos de entrenamiento de etiquetas de código de actividades.
+y_train <- test/y_train.txt
 
 
 3. Paso 1: fusiona los conjuntos de entrenamiento y prueba para crear un conjunto de datos.
