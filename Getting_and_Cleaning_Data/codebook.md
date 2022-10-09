@@ -26,6 +26,7 @@ if (!file.exists("UCI HAR Dataset")) {
 }
 
 3. Asignar cada dato a las variables:
+
 3.1. Asignamos al objeto features los datos leidos que provienen de las pruebas, especificamente los que se encuentran en el archivo features.txt:
 
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
