@@ -20,8 +20,10 @@ if (!file.exists(filename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL, filename, method="curl")
 }
+
 if (!file.exists("UCI HAR Dataset")) { 
   unzip(filename) 
+}
 
 3. Asignar cada dato a las variables:
 3.1. Asignamos al objeto features los datos leidos que provienen de las pruebas, especificamente los que se encuentran en el archivo features.txt:
