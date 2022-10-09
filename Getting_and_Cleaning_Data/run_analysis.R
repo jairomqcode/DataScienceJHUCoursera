@@ -3,7 +3,7 @@
 library(dplyr)
 
 ## Descargamos el conjunto de datos:
-#Asignamos un valor al vector: nombre del archivo que guardara la data descargada...
+#Asignamos un valor al objeto: nombre del archivo que guardara la data descargada...
 filename <- "coursera_proyecto3_final.zip"
 
 #Metódos utilizados en esta parte:
@@ -27,24 +27,16 @@ if (!file.exists("UCI HAR Dataset")) {
   unzip(filename) 
 }
 #Asignación de los marcos de datos:
-#vector caracteristicas:
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
-#vector actividades:
 activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("code", "activity"))
-#sujeto de prueba:
 subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "subject")
 # símbolo $: podemos extraer subconjuntos usando nombres. Este método permite extraer un sólo 
 #elemento a la vez, funciona para data frames y listas, y para el caso de los data frame, el 
 #elemento extraido siempre será una columna.
-#prueba en x:
 x_test <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$functions)
-#prueba en y:
 y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "code")
-#sujeto de entrenamiento:
 subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names = "subject")
-#entrenamiento en x:
 x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
-#entrenamiento en y:
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 
 
