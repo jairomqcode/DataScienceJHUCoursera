@@ -93,7 +93,9 @@ names(TidyData)<-gsub("gravity", "Gravity", names(TidyData))
 7. Paso 5: a partir del conjunto de datos del paso 4, cree un segundo conjunto de datos ordenado e independiente con el promedio de cada variable para cada actividad y cada tema.
 7.1. Creamos FinalData resumiendo TidyData, tomando las medias de cada variable para cada activity y cada suject, luego agrupados por subject y activity.
 FinalData <- TidyData %>%
+
 group_by(subject, activity) %>%
+
 summarise_all(funs(mean))
 
 7.2 Exportamos FinalData al archivo nombrado FinalData.txt.
