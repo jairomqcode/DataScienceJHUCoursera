@@ -20,11 +20,11 @@ Cada fila contiene:
 3.1. Tema: identificador de asunto, número entero.
 
 3.2. Actividad: identificador de actividad con 6 valores posibles:
-- CAMINANDO: el sujeto estaba caminando.
+- WALKING: el sujeto estaba caminando.
 - WALKING_UPSTAIRS: el sujeto subiendo las escaleras.
 - WALKING_DOWNSTAIRS: el sujeto bajando las escaleras.
-- SENTADO: el sujeto estaba sentado.
-- DE PIE: el sujeto estaba de pie.
+- SEATED: el sujeto estaba sentado.
+- STANDING: el sujeto estaba de pie.
 - LAYING: el sujeto estaba acostado.
 
 4. Medidas:
