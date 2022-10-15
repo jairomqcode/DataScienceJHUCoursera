@@ -27,7 +27,8 @@ ARCHIVOS:
 1. codeBook.md: contiene la explicación de cada parte del código, específicamente, las variables, los datos, los procesos realizados, como las transformaciones realizadas para la limpieza y ordenamiento de los datos.
 
 ruta: Getting_and_Cleaning_Data/codebook.md
-Link: https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/codebook.md
+Link: 
+https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/codebook.md
 
 2. run_analysis.R: este archivo contiene el código que se realizó para el procesamiento de los datos del proyecto, donde se cumplen cada uno de los pasos que se plantean dentro de los objetivos del proyecto, que se describen a continuación:
 2.1. Merges the training and the test sets to create one data set.
@@ -37,11 +38,13 @@ Link: https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15
 2.5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ruta: Getting_and_Cleaning_Data/run_analysis.R
-link: https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/run_analysis.R
+link: 
+https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/run_analysis.R
 
 3. tidy_data.txt: este archivo contiene todos los datos finales exportados, los cuales, fueron procesados bajo las instrucciones descritas en el código del run_analysis.R.
 
 ruta: Getting_and_Cleaning_Data/tidy_data.txt
-link: https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/tidy_data.txt
+link: 
+https://github.com/jairomqcode/DataScienceJHUCoursera/blob/282e93ecd5f2e15222f0ef2267427e44d32db5bf/Getting_and_Cleaning_Data/tidy_data.txt
 
 
