@@ -57,7 +57,7 @@ dato_total$Date <- as.Date(dato_total$Date, format="%d/%m/%Y")
 ################################################################################
 # Paso 2: subconjunto de los datos.
 #
-#subset: consiste en obtener una submuestra de los datos originales, con el fin
+# subset: consiste en obtener una submuestra de los datos originales, con el fin
 # de obtener elementos específicos basados en alguna condición lógica.
 #
 # rm: significa eliminar o remover.
