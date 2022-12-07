@@ -3,7 +3,6 @@
 # Archivo: plot3.R
 #
 # Información:
-#
 # Usando datos recopilados del Repositorio de aprendizaje automático de UC Irvine,
 # para generar un gráfico de diferentes submediciones vs tiempo.
 ################################################################################
@@ -69,9 +68,6 @@ dato <- subset(dato_total, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 # Paso 3: Convertir datos.
 # 
 # datetime: fecha y hora.
-#
-# paste (): toma múltiples elementos de los múltiples vectores y los concatena 
-# en un solo elemento.
 #
 # La función as.POSIXct() en R se usa para convertir la configuración predeterminada
 # de tipo de carácter para UTC y 1970 en un objeto POSIXct.
