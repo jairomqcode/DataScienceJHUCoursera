@@ -2,7 +2,6 @@
 # Archivo: plot4.R
 #
 # Información:
-#
 # Usando datos recopilados del repositorio de aprendizaje automático de UC Irvine,
 # para generar 4 gráficos en 1 espacio (brecha vs tiempo, Volumen vs tiempo,
 # submedición vs tiempo y GRP vs tiempo).
