@@ -1,7 +1,6 @@
 ################################################################################
 #
 # Archivo: plot2.R
-#
 # Información:
 #
 # Datos recopilados del Repositorio de aprendizaje automático de UC Irvine para 
