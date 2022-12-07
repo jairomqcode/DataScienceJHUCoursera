@@ -2,7 +2,6 @@
 #Archivo plot1.R
 # 
 # Información:
-#
 # Datos recopilados del Repositorio de aprendizaje automático de UC Irvine,
 # para generar un histograma de potencia activa global (kilovatios).
 ################################################################################
