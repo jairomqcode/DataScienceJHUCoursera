@@ -23,4 +23,6 @@ Las variables incluidas en este conjunto de datos son:
 El conjunto de datos se almacena en un archivo de valores separados por comas (CSV) y hay un total de 17 568 observaciones en este conjunto de datos.
 
 
-## Cargar y preprocesar los datos.
+## Libreria:
+library("data.table")
+library(ggplot2)
