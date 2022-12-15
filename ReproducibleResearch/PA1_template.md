@@ -21,3 +21,6 @@ Las variables incluidas en este conjunto de datos son:
 * **intervalo**: Identificador del intervalo de 5 minutos en el que se realizó la medición.
 
 El conjunto de datos se almacena en un archivo de valores separados por comas (CSV) y hay un total de 17 568 observaciones en este conjunto de datos.
+
+
+## Cargar y preprocesar los datos.
