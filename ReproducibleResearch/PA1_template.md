@@ -51,5 +51,9 @@ número total de pasos dados por día:
 Total_Steps <- activityDT[, c(lapply(.SD, sum, na.rm = FALSE)), .SDcols = c("steps"), by = .(date)] 
 head(Total_Steps, 10)
 ```
+Gráfica del histograma:
+```{r}
+g1 <- ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
+```
 
 
