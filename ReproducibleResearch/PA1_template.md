@@ -63,7 +63,7 @@ prom <- Total_Steps[, .(Mean_Steps = mean(steps, na.rm = TRUE), Median_Steps = m
 ```
 
 ## ¿Cuál es el patrón de actividad diaria promedio?
-Haga una gráfica de serie de tiempo (es decir, 𝚝𝚢𝚙𝚎 = "𝚕") del intervalo de 5 minutos (eje x) y la cantidad promedio de pasos dados, promediados en 
+Gráfica de serie de tiempo (es decir, 𝚝𝚢𝚙𝚎 = "𝚕") del intervalo de 5 minutos (eje x) y la cantidad promedio de pasos dados, promediados en 
 todos los días (eje y).
 ```{r}
 IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"), by = .(interval)] 
@@ -72,11 +72,44 @@ g2 <- ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue"
       labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
 ```
 
-¿Qué intervalo de 5 minutos, en promedio de todos los días del conjunto de datos, contiene la cantidad máxima de pasos?
+Intervalo de 5 minutos, en promedio de todos los días del conjunto de datos, contiene la cantidad máxima de pasos
 ```{r}
 int <- IntervalDT[steps == max(steps), .(max_interval = interval)]
 ```
 
+## Valores faltantes:
+Número total de valores faltantes en el conjunto de datos (es decir, el número total de filas con NA).
+```{r}
+nf <- nrow(activityDT[is.na(steps),])
+```
 
+Rellenar los valores faltantes con la mediana del conjunto de datos:
+```{r}
+rvf <- activityDT[is.na(steps), "steps"] <- activityDT[, c(lapply(.SD, median, na.rm = TRUE)), .SDcols = c("steps")]
+```
 
+Nuevo conjunto de datos que sea igual al conjunto de datos original pero con los datos faltantes completados:
+```{r}
+data.table::fwrite(x = activityDT, file = "data/tidyData.csv", quote = FALSE)
+```
 
+Histograma del número total de pasos dados cada día e informe la media y la mediana del número total de pasos dados por día. 
+¿Estos valores difieren de las estimaciones de la primera parte de la tarea? 
+¿Cuál es el impacto de imputar los datos que faltan en las estimaciones del número total diario de pasos?
+Número total de pasos dados por día:
+```{r}
+Total_Steps <- activityDT[, c(lapply(.SD, sum)), .SDcols = c("steps"), by = .(date)]
+```
+Media y mediana del número total de pasos dados por día:
+```{r}
+prom2 <- Total_Steps[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
+```
+Grafica:
+```{r}
+g3 <- ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
+```
+
+Type of Estimate | Mean_Steps | Median_Steps
+--- | --- | ---
+Parte 1 (con na) | 10765 | 10765
+Parte 2 (llenar na con la mediana) | 9354.23 | 10395
