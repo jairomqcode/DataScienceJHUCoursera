@@ -67,6 +67,7 @@ Haga una gráfica de serie de tiempo (es decir, 𝚝𝚢𝚙𝚎 = "𝚕") del i
 todos los días (eje y).
 ```{r}
 IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"), by = .(interval)] 
+
 g2 <- ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue", size=1) + 
       labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
 ```
