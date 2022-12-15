@@ -39,3 +39,10 @@ Descargamos el archivo de datos:
 download.file(archivoUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
 unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
 ```
+
+## Lectura de datos csv en data.table:
+```{r}
+activityDT <- data.table::fread(input = "data/activity.csv")
+```
+
+
