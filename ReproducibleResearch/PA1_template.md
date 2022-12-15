@@ -113,3 +113,8 @@ Type of Estimate | Mean_Steps | Median_Steps
 --- | --- | ---
 Parte 1 (con na) | 10766.19 | 10765
 Parte 2 (llenar na con la mediana) | 9354.23 | 10395
+
+## ¿Hay diferencias en los patrones de actividad entre los días de semana y los fines de semana?
+Cree una nueva variable de factor en el conjunto de datos con dos niveles: 
+"día de la semana" y "fin de semana", que indica si una fecha dada es un día de la semana o un día de fin de semana.
+
