@@ -14,10 +14,10 @@ Los datos para esta tarea se pueden descargar del sitio web del curso:
 
 Las variables incluidas en este conjunto de datos son:
 
-**pasos**: número de pasos dados en un intervalo de 5 minutos (los valores faltantes se codifican como NA).
+* **pasos**: número de pasos dados en un intervalo de 5 minutos (los valores faltantes se codifican como NA).
 
-**fecha**: La fecha en que se tomó la medida en formato AAAA-MM-DD.
+* **fecha**: La fecha en que se tomó la medida en formato AAAA-MM-DD.
 
-**intervalo**: Identificador del intervalo de 5 minutos en el que se realizó la medición.
+* **intervalo**: Identificador del intervalo de 5 minutos en el que se realizó la medición.
 
 El conjunto de datos se almacena en un archivo de valores separados por comas (CSV) y hay un total de 17 568 observaciones en este conjunto de datos.
