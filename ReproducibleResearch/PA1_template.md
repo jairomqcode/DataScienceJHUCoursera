@@ -9,4 +9,5 @@ Esta asignación hace uso de datos de un dispositivo de monitoreo de actividad p
 
 Los datos para esta tarea se pueden descargar del sitio web del curso:
 * Dataset: *[Activity monitoring data][1]* 
+
 [1]: https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip
