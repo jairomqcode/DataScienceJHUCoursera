@@ -117,4 +117,36 @@ Parte 2 (llenar na con la mediana) | 9354.23 | 10395
 ## ¿Hay diferencias en los patrones de actividad entre los días de semana y los fines de semana?
 Cree una nueva variable de factor en el conjunto de datos con dos niveles: 
 "día de la semana" y "fin de semana", que indica si una fecha dada es un día de la semana o un día de fin de semana.
+```{r}
+activityDT <- data.table::fread(input = "data/activity.csv")
+activityDT[, date := as.POSIXct(date, format = "%Y-%m-%d")]
+activityDT[, `Day of Week`:= weekdays(x = date)]
+activityDT[grepl(pattern = "Monday|Tuesday|Wednesday|Thursday|Friday", x = `Day of Week`), "weekday or weekend"] <- "weekday"
+activityDT[grepl(pattern = "Saturday|Sunday", x = `Day of Week`), "weekday or weekend"] <- "weekend"
+activityDT[, `weekday or weekend` := as.factor(`weekday or weekend`)]
+head(activityDT, 10)
+```
+Haz un gráfico de panel que contenga un gráfico de series de tiempo (es decir, 𝚝𝚢𝚙𝚎 = "𝚕") del intervalo de 5 minutos (eje x) y el número promedio de 
+pasos dados, promediados entre todos los días de la semana o los días de fin de semana (eje y).
+```{r}
+activityDT[is.na(steps), "steps"] <- activityDT[, c(lapply(.SD, median, na.rm = TRUE)), .SDcols = c("steps")]
+IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"), by = .(interval, `weekday or weekend`)] 
+g4 <- ggplot(IntervalDT , aes(x = interval , y = steps, color=`weekday or weekend`)) + geom_line() + 
+      labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps") + facet_wrap(~`weekday or weekend` , ncol = 1, nrow=2)
+```
+
+## Imprimir:
+```{r}
+print(Total_Steps)
+print(g1)
+print(prom)
+print(IntervalDT)
+print(g2)
+print(int)
+print(nf)
+print(rvf)
+print(prom2)
+print(g3)
+print(g4)
+```
 
