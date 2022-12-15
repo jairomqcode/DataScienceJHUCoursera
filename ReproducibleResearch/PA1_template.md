@@ -30,3 +30,8 @@ library(ggplot2)
 ```
 
 ## Cargar y preprocesar los datos.
+Url desde donde obtendremos los datos:
+```{r}
+archivoUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+```
+Descomprimir los datos para obtener un archivo csv:
