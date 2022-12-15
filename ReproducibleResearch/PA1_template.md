@@ -26,6 +26,7 @@ El conjunto de datos se almacena en un archivo de valores separados por comas (C
 ## Libreria:
 ```{r}
 library("data.table")
-
 library(ggplot2)
 ```
+
+## Cargar y preprocesar los datos.
