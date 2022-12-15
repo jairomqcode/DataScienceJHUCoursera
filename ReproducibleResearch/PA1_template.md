@@ -46,6 +46,7 @@ activityDT <- data.table::fread(input = "data/activity.csv")
 ```
 
 ## ¿Cuál es la media del número total de pasos dados por día?
+número total de pasos dados por día:
 ```{r}
 Total_Steps <- activityDT[, c(lapply(.SD, sum, na.rm = FALSE)), .SDcols = c("steps"), by = .(date)] 
 head(Total_Steps, 10)
