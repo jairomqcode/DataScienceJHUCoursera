@@ -111,5 +111,5 @@ g3 <- ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwid
 
 Type of Estimate | Mean_Steps | Median_Steps
 --- | --- | ---
-Parte 1 (con na) | 10765 | 10765
+Parte 1 (con na) | 10766.19 | 10765
 Parte 2 (llenar na con la mediana) | 9354.23 | 10395
