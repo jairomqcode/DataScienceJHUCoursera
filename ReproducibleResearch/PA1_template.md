@@ -1,4 +1,6 @@
 # Titulo: Investigación Reproducible (Proyecto 1).
+Autor: Jairo Mindiola Quintas
+fecha: 15/12/2022.
 repositorio: https://github.com/jairomqcode/DataScienceJHUCoursera.git
 
 ## Introducción del proyecto.
