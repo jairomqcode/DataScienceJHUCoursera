@@ -8,4 +8,5 @@ Ahora es posible recopilar una gran cantidad de datos sobre el movimiento person
 Esta asignación hace uso de datos de un dispositivo de monitoreo de actividad personal. Este dispositivo recopila datos en intervalos de 5 minutos a lo largo del día. Los datos consisten en dos meses de datos de un individuo anónimo recopilados durante los meses de octubre y noviembre de 2012 e incluyen la cantidad de pasos dados en intervalos de 5 minutos cada día.
 
 Los datos para esta tarea se pueden descargar del sitio web del curso:
-* Dataset: [Activity monitoring data] (https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip)
+* Dataset: *[Activity monitoring data] [1]* 
+[1]: https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip)
