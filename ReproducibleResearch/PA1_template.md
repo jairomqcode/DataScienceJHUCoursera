@@ -72,7 +72,10 @@ g2 <- ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue"
       labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
 ```
 
-
+¿Qué intervalo de 5 minutos, en promedio de todos los días del conjunto de datos, contiene la cantidad máxima de pasos?
+```{r}
+int <- IntervalDT[steps == max(steps), .(max_interval = interval)]
+```
 
 
 
