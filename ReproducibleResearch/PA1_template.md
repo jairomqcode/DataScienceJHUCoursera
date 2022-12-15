@@ -62,6 +62,15 @@ Calcule e informe la media y la mediana del número total de pasos dados por dí
 prom <- Total_Steps[, .(Mean_Steps = mean(steps, na.rm = TRUE), Median_Steps = median(steps, na.rm = TRUE))]
 ```
 
+## ¿Cuál es el patrón de actividad diaria promedio?
+Haga una gráfica de serie de tiempo (es decir, 𝚝𝚢𝚙𝚎 = "𝚕") del intervalo de 5 minutos (eje x) y la cantidad promedio de pasos dados, promediados en 
+todos los días (eje y).
+```{r}
+IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"), by = .(interval)] 
+g2 <- ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue", size=1) + 
+      labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
+```
+
 
 
 
