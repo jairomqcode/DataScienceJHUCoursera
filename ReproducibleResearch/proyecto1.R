@@ -123,8 +123,7 @@ head(activityDT, 10)
 ## Haz un gráfico de panel que contenga un gráfico de series de tiempo (es decir,
 ## 𝚝𝚢𝚙𝚎 = "𝚕") del intervalo de 5 minutos (eje x) y el número promedio de 
 ## pasos dados, promediados entre todos los días de la semana o los días de fin 
-## de semana (eje y). Consulte el archivo README en el repositorio de GitHub para
-## ver un ejemplo de cómo debería verse este gráfico usando datos simulados.
+## de semana (eje y).
 activityDT[is.na(steps), "steps"] <- activityDT[, c(lapply(.SD, median, na.rm = TRUE)), .SDcols = c("steps")]
 IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"), by = .(interval, `weekday or weekend`)] 
 
