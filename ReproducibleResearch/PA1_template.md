@@ -34,4 +34,8 @@ Url desde donde obtendremos los datos:
 ```{r}
 archivoUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 ```
-Descomprimir los datos para obtener un archivo csv:
+Descargamos el archivo de datos:
+```{r}
+download.file(archivoUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
+unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
+```
